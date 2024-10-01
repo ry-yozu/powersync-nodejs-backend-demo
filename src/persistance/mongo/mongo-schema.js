@@ -2,7 +2,7 @@ export const types = {
   date: (v) => new Date(v),
   boolean: (v) => !!v,
   string: (v) => String(v),
-  number: (v) => number(v)
+  number: (v) => number(v),
 };
 
 export const schema = {
@@ -21,6 +21,57 @@ export const schema = {
     list_id: types.string,
     completed_at: types.date,
     completed_by: types.string
+  },
+  tour: {
+    _id: types.string,
+    _insertedTS: types.date,
+    _modifiedTS: types.date,
+    closedAt: types.date,
+    closedBy: types.string,
+    courier: types.string,
+    opUnit: types.string,
+    assocOpUnit: types.string,
+    partitionKey: types.string,
+    tourDate: types.date,
+    tourName: types.string,
+    tourType: types.string,
+    internallyModifiedDateTimestamp: types.date,
+    pudo: types.boolean,
+
+  },
+  parcel: {
+    _id: types.string,
+    _insertedTS: types.date,
+    _modifiedTS: types.date,
+    attemptsCount: types.number,
+    courier: types.string,
+    edd: types.date,
+    eventDateTime: types.date,
+    expected: types.boolean,
+    heldReason: types.string,
+    internallyModifiedDateTimestamp: types.date,
+    loadedAt: types.date,
+    loadedBy: types.string,
+    ndd: types.date,
+    opUnit: types.string,
+    assocOpUnit: types.string,
+    parcelInstanceNumber: types.number,
+    parcelUpi: types.string,
+    partitionKey: types.string,
+    receivedBy: types.string,
+    receivedDateTimestamp: types.date,
+    removedAt: types.date,
+    removedBy: types.string,
+    tourDate: types.date,
+    tourEventCode: types.string,
+    tourName: types.string,
+    tourType: types.string,
+    tourMissort: types.boolean,
+    pudoTour: types.boolean,
+    pudoContainer: types.boolean,
+    storeId: types.string,
+    containerId: types.string,
+    containerInstance: types.number,
   }
 };
 
