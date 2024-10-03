@@ -38,7 +38,7 @@ export const schema = {
     internallyModifiedDateTimestamp: types.date,
     pudo: types.boolean
   },
-  parcel: {
+  tour_parcels: {
     _id: types.string,
     _insertedTS: types.date,
     _modifiedTS: types.date,
