@@ -2,7 +2,7 @@ export const types = {
   date: (v) => new Date(v),
   boolean: (v) => !!v,
   string: (v) => String(v),
-  number: (v) => number(v),
+  number: (v) => Number(v)
 };
 
 export const schema = {
@@ -36,8 +36,7 @@ export const schema = {
     tourName: types.string,
     tourType: types.string,
     internallyModifiedDateTimestamp: types.date,
-    pudo: types.boolean,
-
+    pudo: types.boolean
   },
   parcel: {
     _id: types.string,
@@ -71,7 +70,7 @@ export const schema = {
     pudoContainer: types.boolean,
     storeId: types.string,
     containerId: types.string,
-    containerInstance: types.number,
+    containerInstance: types.number
   }
 };
 
