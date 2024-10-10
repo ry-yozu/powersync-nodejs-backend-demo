@@ -63,7 +63,7 @@ router.get('/token', async (req, res) => {
       alg: powerSyncKey.alg,
       kid: powerSyncKey.kid
     })
-    .setSubject(req.params.userId)
+    .setSubject(req.query.userId)
     .setIssuedAt()
     .setIssuer(config.powersync.jwtIssuer)
     .setAudience(config.powersync.url)
