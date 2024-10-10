@@ -1,5 +1,4 @@
 import { createMongoPersister } from './mongo/mongo-persistance.js';
-import { createPostgresPersister } from './postgres/postgres-persistance.js';
 
 /**
  * Apply a batch of PUT, PATCH and/or DELETE updates.
