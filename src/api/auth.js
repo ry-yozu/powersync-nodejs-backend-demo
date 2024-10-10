@@ -56,8 +56,6 @@ router.get('/token', async (req, res) => {
   await ensureKeys();
   const powerSyncKey = keys.privateKey;
 
-  console.log(req);
-
   const token = await new SignJWT({})
     .setProtectedHeader({
       alg: powerSyncKey.alg,
