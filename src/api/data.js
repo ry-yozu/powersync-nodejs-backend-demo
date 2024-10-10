@@ -4,7 +4,7 @@ import { factories } from '../persistance/persister-factories.js';
 
 const router = express.Router();
 
-const persistenceFactory = factories[config.database.type];
+const persistenceFactory = factories.mongodb;
 
 const { updateBatch } = await persistenceFactory(config.database.uri);
 

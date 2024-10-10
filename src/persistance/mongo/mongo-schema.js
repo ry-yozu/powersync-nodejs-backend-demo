@@ -68,6 +68,7 @@ export function applySchema(tableSchema, data) {
   const converted = Object.entries(tableSchema)
     .map(([key, converter]) => {
       const rawValue = data[key];
+      console.log('raw val', rawValue);
       if (typeof rawValue == 'undefined') {
         return null;
       } else if (rawValue == null) {
