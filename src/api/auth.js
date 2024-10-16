@@ -65,7 +65,7 @@ router.get('/token', async (req, res) => {
     .setIssuedAt()
     .setIssuer(config.powersync.jwtIssuer)
     .setAudience(config.powersync.url)
-    .setExpirationTime('5m')
+    .setExpirationTime('50m')
     .sign(powerSyncKey.key);
   res.send({
     token: token,
